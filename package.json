@@ -21,7 +21,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.5",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "4.161.0"
   },
   "packageManager": "pnpm@12.16.1",
   "pnpm": {
