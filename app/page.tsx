@@ -1,69 +1,153 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Icon } from "@/components/Icons";
+import { AppointmentButton } from "@/components/AppointmentButton";
+import { products } from "@/data/products";
 
-export default function Home() {
+// Demo selection. Replace the fourth entry with a real product when ready.
+const popularProducts = [
+  ...products.slice(0, 3),
+  {
+    id: "celestial",
+    name: "Кольцо Солитер",
+    detail: "18kt white gold · round brilliant diamonds",
+    price: "$4,500",
+    image: "/assets/photo-1617038220319-276d3cfab638.jpg",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main id="top">
+      <Header />
+
+      {/* Главный экран */}
+      <section className="hero" aria-labelledby="hero-title">
         <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          alt="A portrait adorned with a brilliant diamond necklace"
+          className="hero-image"
+          src="/assets/campaign.png"
+          fill
+          sizes="100vw"
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+        <div className="hero-shade"></div>
+        <div className="hero-copy">
+          <p className="eyebrow">ИСКУССТВО СВЕТА</p>
+          <h1 id="hero-title">
+            Наследие
+            <br />
+            в каждом <em>аспекте.</em>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <a className="light-link" href="#pieces">
+            ОТКРЫТЬ КОЛЛЕКЦИЮ <Icon name="arrow" />
+          </a>
+        </div>
+        <div className="hero-caption">
+          ОСЕННЯЯ КОЛЛЕКЦИЯ <span>01 / 04</span>
+        </div>
+        <a className="scroll-cue" href="#pieces" aria-label="Scroll to discover">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-arrow-down"
+            aria-hidden="true"
+          >
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+        </a>
+      </section>
+
+      {/* Популярные украшения: единый блок вместо вступления, коллекции и прежней подборки */}
+      <section className="popular-products" id="pieces" aria-labelledby="popular-title">
+        {/* Сохраняем переходы из существующей шапки. */}
+        <span id="intro" className="popular-anchor" aria-hidden="true" />
+        <span id="collections" className="popular-anchor" aria-hidden="true" />
+
+        <div className="popular-heading">
+          <h2 id="popular-title">Популярные украшения</h2>
+          <Link href="/catalog" className="popular-view-all">
+            Смотреть все <Icon name="arrow" />
+          </Link>
+        </div>
+
+        <div className="popular-grid">
+          {popularProducts.map((product) => (
+            <article className="popular-card" key={product.id}>
+              <a href="#appointment" className="popular-product-link">
+                <div className="popular-image">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={1000}
+                    height={750}
+                    sizes="(max-width: 760px) 43vw, 21vw"
+                  />
+                </div>
+                <div className="popular-info">
+                  <h3>{product.name}</h3>
+                  <p className="popular-detail">{product.detail}</p>
+                  <p className="popular-price">{product.price}</p>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Ателье */}
+      <section className="atelier" id="story">
+        <div className="atelier-copy">
+          <p className="eyebrow">ТРУД РЕМЕСЛЕННИКОВ</p>
+          <h2>
+            Одно ателье.
+            <br />
+            <em>Тысяча</em>
+            <br />
+            возможностей.
+          </h2>
+          <p>
+            В самом сердце Дубая наши мастера дарят каждому изделию свою неповторимую, спокойную жизнь. Создано, чтобы служить вечно.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a className="light-link" href="#appointment">
+            ИССЛЕДОВАТЬ Мастерскую <Icon name="arrow" />
           </a>
         </div>
-      </main>
-    </div>
+        <div className="atelier-image">
+          <Image
+            alt="Fine gold jewelry crafted with meticulous detail"
+            loading="lazy"
+            src="/assets/photo-1611652022419-a9419f74343d.jpg"
+            fill
+            sizes="100vw"
+          />
+        </div>
+      </section>
+
+      {/* Запись на встречу */}
+      <section className="appointment" id="appointment">
+        <p className="eyebrow">МОМЕНТ ДЛЯ ВАС</p>
+        <h2>
+          Некоторые вещи
+          <br />
+          лучше <em>увидеть</em> лично.
+        </h2>
+        <AppointmentButton>
+          ЗАПИСАТЬСЯ НА ВСТРЕЧУ <Icon name="arrow" />
+        </AppointmentButton>
+      </section>
+
+      <Footer />
+    </main>
   );
 }

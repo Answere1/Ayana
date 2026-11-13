@@ -1,0 +1,327 @@
+/* ========== AYANA: О НАС И КОНТАКТЫ /about ========== */
+.ayana-about-page {
+    color: #111;
+    background: #fff;
+    padding: 28px 4% 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.ayana-about-breadcrumbs,
+.ayana-about-intro,
+.ayana-about-contacts {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.ayana-about-breadcrumbs {
+    display: flex;
+    gap: 12px;
+    font: 14px/1.5 Georgia, "Times New Roman", serif;
+    color: #777;
+    margin-bottom: 34px
+}
+
+.ayana-about-breadcrumbs a:hover {
+    text-decoration: underline
+}
+
+.ayana-about-intro {
+    display: grid;
+    grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
+    gap: 54px;
+    align-items: center;
+    padding: 0 0 46px
+}
+
+.ayana-about-copy {
+    min-width: 0
+}
+
+.ayana-about-eyebrow {
+    font: 500 13px/1.5 Arial, sans-serif !important;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #95752b;
+    margin: 0 0 18px !important
+}
+
+.ayana-about-copy h1 {
+    font: 400 clamp(35px, 3.7vw, 60px)/1.05 Georgia, "Times New Roman", serif;
+    letter-spacing: -.035em;
+    margin: 0 0 28px
+}
+
+.ayana-about-copy>p:not(.ayana-about-eyebrow) {
+    font: 400 clamp(15px, 1.3vw, 19px)/1.55 Arial, Helvetica, sans-serif;
+    margin: 0 0 16px;
+    max-width: 520px
+}
+
+.ayana-about-catalog-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font: 19px/1.4 Georgia, serif;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 3px;
+    margin-top: 11px
+}
+
+.ayana-about-catalog-link span {
+    transition: transform .2s
+}
+
+.ayana-about-catalog-link:hover span {
+    transform: translateX(4px)
+}
+
+.ayana-about-photo {
+    position: relative;
+    aspect-ratio: 1.65;
+    overflow: hidden;
+    background: #eee8df
+}
+
+.ayana-about-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center
+}
+
+.ayana-about-photo1 {
+    position: relative;
+    aspect-ratio: 1.65;
+    overflow: hidden;
+    background: #eee8df
+}
+
+.ayana-about-photo1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: center
+}
+
+.ayana-about-contacts {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 70px;
+    padding: 44px 0 52px;
+    border-top: 1px solid #ccc;
+    scroll-margin-top: 24px
+}
+
+.ayana-about-anchor {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.ayana-about-invitation h2 {
+    font: 400 clamp(32px, 3.1vw, 49px)/1.12 Georgia, "Times New Roman", serif;
+    letter-spacing: -.025em;
+    margin: 0 0 16px
+}
+
+.ayana-about-invitation>p:not(.ayana-about-pending) {
+    font: 16px/1.6 Arial, sans-serif;
+    margin: 0;
+    max-width: 490px
+}
+
+.ayana-about-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+    padding: 14px 22px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #111;
+    font: 17px/1.4 Georgia, serif;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.ayana-about-whatsapp:hover:not(:disabled) {
+    background: #302b23
+}
+
+.ayana-about-whatsapp:disabled {
+    cursor: not-allowed;
+    opacity: .55
+}
+
+.ayana-about-pending {
+    font: 12px/1.5 Arial, sans-serif;
+    color: #888;
+    margin: 10px 0 0
+}
+
+.ayana-about-contact-list {
+    padding: 80px 0;
+    min-width: 0
+}
+
+.ayana-about-contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    color: inherit
+}
+
+.ayana-about-contact-row:first-child {
+    padding-top: 6px
+}
+
+.ayana-about-contact-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font: 21px/1.4 Arial, Helvetica, sans-serif
+}
+
+.ayana-about-contact-label svg {
+    flex-shrink: 0;
+    display: block
+}
+
+.ayana-about-contact-value {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    text-align: right;
+    font: 18px/1.4 Arial, Helvetica, sans-serif;
+    overflow-wrap: anywhere
+}
+
+.ayana-about-contact-pending .ayana-about-contact-value {
+    color: #000000
+}
+
+.ayana-about-contact-row[href]:hover {
+    background: #faf9f6
+}
+
+.ayana-about-page a:focus-visible,
+.ayana-about-page button:focus-visible {
+    outline: 2px solid #95752b;
+    outline-offset: 5px
+}
+
+@media(max-width:1100px) {
+    .ayana-about-intro {
+        gap: 30px
+    }
+
+    .ayana-about-contacts {
+        gap: 35px
+    }
+
+    .ayana-about-contact-label {
+        font-size: 16px;
+        gap: 12px
+    }
+
+    .ayana-about-contact-value {
+        font-size: 14px
+    }
+
+    .ayana-about-copy h1 {
+        font-size: 42px
+    }
+}
+
+@media(max-width:800px) {
+    .ayana-about-page {
+        padding: 24px 5% 0
+    }
+
+    .ayana-about-breadcrumbs {
+        margin-bottom: 25px
+    }
+
+    .ayana-about-intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-bottom: 35px
+    }
+
+    .ayana-about-copy h1 {
+        font-size: clamp(35px, 8vw, 49px);
+        max-width: 600px
+    }
+
+    .ayana-about-copy>p:not(.ayana-about-eyebrow) {
+        font-size: 16px
+    }
+
+    .ayana-about-photo {
+        aspect-ratio: 1.6
+    }
+
+    .ayana-about-contacts {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 32px 0 40px
+    }
+
+    .ayana-about-invitation h2 {
+        font-size: 35px
+    }
+
+    .ayana-about-whatsapp {
+        margin-top: 22px
+    }
+
+    .ayana-about-contact-label {
+        font-size: 16px
+    }
+
+    .ayana-about-contact-row {
+        gap: 16px
+    }
+
+    .ayana-about-contact-value {
+        font-size: 14px
+    }
+}
+
+@media(max-width:420px) {
+    .ayana-about-contact-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px
+    }
+
+    .ayana-about-contact-value {
+        text-align: left;
+        justify-content: flex-start;
+        padding-left: 44px
+    }
+
+    .ayana-about-whatsapp {
+        width: 100%;
+        box-sizing: border-box
+    }
+
+    .ayana-about-copy h1 {
+        font-size: 35px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .ayana-about-catalog-link span {
+        transition: none
+    }
+}
