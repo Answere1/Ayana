@@ -26,6 +26,11 @@ function resultLabel(count: number) {
   return remainder >= 11 && remainder <= 14 ? "изделий" : last === 1 ? "изделие" : last >= 2 && last <= 4 ? "изделия" : "изделий";
 }
 
+// Поддерживает и прежние строки, и массивы из нескольких вставок.
+function getStones(stone: string | readonly string[]): readonly string[] {
+  return typeof stone === "string" ? [stone] : stone;
+}
+
 export default function CatalogPage() {
   const [filters, setFilters] = useState<Filters>(emptyFilters);
   const [minPrice, setMinPrice] = useState("");
@@ -38,9 +43,15 @@ export default function CatalogPage() {
   const minimum = minPrice === "" ? 0 : Number(minPrice);
   const maximum = maxPrice === "" ? ceiling : Number(maxPrice);
   const results = catalogProducts.filter(product =>
-    groups.every(group => !filters[group.key].length || filters[group.key].includes(product[group.key])) &&
+    groups.every(group => {
+      const chosen = filters[group.key];
+      if (!chosen.length) return true;
+      return group.key === "stone"
+        ? chosen.some(stone => getStones(product.stone).includes(stone))
+        : chosen.includes(product[group.key]);
+    }) &&
     product.price >= minimum && product.price <= maximum &&
-    `${product.name} ${product.category} ${product.metal} ${product.stone}`.toLocaleLowerCase("ru-RU").includes(query.trim().toLocaleLowerCase("ru-RU"))
+    `${product.name} ${product.category} ${product.metal} ${getStones(product.stone).join(" ")}`.toLocaleLowerCase("ru-RU").includes(query.trim().toLocaleLowerCase("ru-RU"))
   ).sort((a, b) => sort === "price-low" ? a.price - b.price : sort === "price-high" ? b.price - a.price : sort === "name" ? a.name.localeCompare(b.name, "ru") : a.rank - b.rank);
   const activeCount = Object.values(filters).flat().length + Number(minPrice !== "") + Number(maxPrice !== "");
   function toggle(key: FilterKey, value: string) {
@@ -57,7 +68,11 @@ export default function CatalogPage() {
           {groups.map(group => <details className="catalog-filter-group" key={group.key} open>
             <summary>{group.title}<span aria-hidden="true">⌄</span></summary>
             <div className="catalog-options">{group.values.map(value => {
-              const count = catalogProducts.filter(product => product[group.key] === value).length;
+              const count = catalogProducts.filter(product =>
+                group.key === "stone"
+                  ? getStones(product.stone).includes(value)
+                  : product[group.key] === value
+              ).length;
               return <label key={value} className={count ? "" : "catalog-option-disabled"}>
                 <input type="checkbox" checked={filters[group.key].includes(value)} disabled={!count} onChange={() => toggle(group.key, value)} />
                 <span>{value} <span className="catalog-option-count">({count})</span></span>
@@ -94,10 +109,10 @@ export default function CatalogPage() {
           <label className="catalog-search"><span className="catalog-sr-only">Поиск по каталогу</span><input type="search" placeholder="Найти украшение" value={query} onChange={event => setQuery(event.target.value)} /></label>
           {activeCount > 0 && <div className="catalog-active-filters">{groups.flatMap(group => filters[group.key].map(value => <button type="button" key={`${group.key}-${value}`} onClick={() => toggle(group.key, value)} aria-label={`Убрать фильтр ${value}`}>{value} <span aria-hidden="true">×</span></button>))}<button type="button" onClick={reset}>Сбросить всё</button></div>}
           <div className={`catalog-products${view === "list" ? " catalog-products-list" : ""}`}>
-            {results.map(product => <article className="catalog-card" key={product.id}>
+            {results.map(product => <article className={`catalog-card catalog-card--${product.id}`} key={product.id}>
               <button type="button" className="catalog-product-button" onClick={() => setSelected(product)} aria-label={`Подробнее: ${product.name}`} aria-haspopup="dialog">
                 <div className="catalog-product-image"><Image src={product.image} alt={product.name} width={600} height={480} /></div>
-                <div className="catalog-product-info"><h2>{product.name}</h2><p className="catalog-product-price">{money(product.price)}</p><p className="catalog-product-detail">{product.metal}, {product.stone.toLocaleLowerCase("ru-RU")}</p></div>
+                <div className="catalog-product-info"><h2>{product.name}</h2><p className="catalog-product-price">{money(product.price)}</p><p className="catalog-product-detail">{product.metal}, {getStones(product.stone).join(", ").toLocaleLowerCase("ru-RU")}</p></div>
               </button>
             </article>)}
           </div>
@@ -110,7 +125,7 @@ export default function CatalogPage() {
       {selected && <div className="catalog-modal-content">
         <Image src={selected.image} alt={selected.name} width={600} height={480} className="catalog-modal-image" />
         <p className="catalog-modal-price">{money(selected.price)}</p>
-        <dl className="catalog-specs"><div><dt>Категория</dt><dd>{selected.category}</dd></div><div><dt>Металл</dt><dd>{selected.metal}</dd></div><div><dt>Вставка</dt><dd>{selected.stone}</dd></div></dl>
+        <dl className="catalog-specs"><div><dt>Категория</dt><dd>{selected.category}</dd></div><div><dt>Металл</dt><dd>{selected.metal}</dd></div><div><dt>Вставка</dt><dd>{getStones(selected.stone).join(", ")}</dd></div></dl>
         <p>{selected.description}</p>
         <Link className="catalog-contact" href="/#appointment" onClick={() => setSelected(null)}>Узнать подробнее</Link>
       </div>}
