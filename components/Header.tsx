@@ -38,7 +38,7 @@ export function Header() {
             </div>
         </header>
         <nav id="mobile-navigation" className="mobile-menu" aria-label="Mobile navigation" hidden={!menuOpen}>
-            {[...navigation, { id: "appointment", href: "", label: "Book an appointment" }].map(link => <a key={link.id} href={link.href} onClick={() => setMenuOpen(false)}>{link.label}<Icon name="arrow" /></a>)}
+            {navigation.map(link => <a key={link.id} href={link.href} onClick={() => setMenuOpen(false)}>{link.label}<Icon name="arrow" /></a>)}
         </nav>
         <Dialog open={panel !== null} title={panel === "search" ? "Поиск украшений" : "Список избранного"} onClose={() => setPanel(null)}>
             {panel === "search" ? <>

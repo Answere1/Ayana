@@ -104,7 +104,7 @@ button {
     align-items: center;
     gap: 40px;
     display: flex;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times new Roman', sans-serif;
 }
 
 .desktop-nav a,
@@ -809,7 +809,7 @@ button {
 
 .popular-products {
     position: relative;
-    padding: 76px 6% 110px;
+    padding: 76px 130px 110px;
     background: #fff;
     color: #171717;
     scroll-margin-top: 24px;
@@ -876,7 +876,7 @@ button {
 .popular-image {
     position: relative;
     aspect-ratio: 335 / 278;
-    background: #efefef;
+    background: #ffffff;
     overflow: hidden;
 }
 

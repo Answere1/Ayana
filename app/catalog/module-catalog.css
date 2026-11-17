@@ -4,7 +4,7 @@
     color: #111;
     min-height: 70vh;
     font-family: "Inter" sans-serif;
-    padding: 34px 2.4% 90px
+    padding: 34px 92px 90px
 }
 
 .catalog-layout {
@@ -18,7 +18,7 @@
 .catalog-sidebar {
     padding-top: 65px;
     min-width: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter' sans-serif;
 }
 
 .catalog-filter-heading {
@@ -185,7 +185,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 15px
+    font-family: 'Inter' sans-serif;
+    font-size: 14px;
 }
 
 .catalog-sort select {
@@ -195,7 +196,8 @@
     min-width: 200px;
     background: #fff;
     color: #111;
-    font: 14px Georgia, serif
+    font-family: 'Inter' sans-serif;
+    font-size: 14px;
 }
 
 .catalog-view {
@@ -257,7 +259,7 @@
 
 .catalog-products {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px 20px
 }
 
@@ -281,7 +283,7 @@
     position: relative;
     aspect-ratio: 1.2;
     overflow: hidden;
-    background: #eee
+    background: #fcfcfc
 }
 
 .catalog-product-image img {
@@ -302,15 +304,15 @@
 
 .catalog-product-info h2 {
     font-family: 'Inter' sans-serif;
-    font-size: 18px;
-    line-height: 24px;;
-    font-weight: 500 (Medium);
+    font-size: 17px;
+    font-weight: 400;
     margin: 0 0 4px
 }
 
 .catalog-product-price {
-    font: 400 20px/1.4 "Inter", serif;
-    font-weight: 500 (Medium);
+    font-family: 'Inter' sans-serif;
+    font-size: 17px;
+    font-weight: 400;
     margin: 0
 }
 
@@ -601,7 +603,6 @@
 
 /* Изменить название */
 .catalog-card--cuchon-ring .catalog-product-info h2 {
-    font-size: 18px;
 }
 
 /* Изменить цвет цены */
