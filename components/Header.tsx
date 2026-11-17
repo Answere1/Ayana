@@ -7,7 +7,7 @@ import { Icon } from "./Icons";
 import Image from "next/image";
 
 const navigation = [
-    { id: "collections", href: "/catalog", label: "Коллекции" },
+    { id: "collections", href: "/", label: "Главная" },
     { id: "pieces", href: "/catalog", label: "Украшения" },
     { id: "about", href: "/about", label: "О нас" },
 ];

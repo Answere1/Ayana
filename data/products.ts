@@ -8,7 +8,7 @@ export interface Product {
 
 // Showcase data from the reference. Replace with AYANA's actual assortment.
 export const products: Product[] = [
-    { id: "laurence", name: "Ожерелье Лоуренс", detail: "18kt white gold · round brilliant diamonds", price: "$18,500", image: "/assets/photo-1599643478518-a784e5dc4c8f.jpg" },
-    { id: "classic-studs", name: "Бриллиантовые серьги", detail: "18kt white gold · 1.00ct total weight", price: "$6,800", image: "/assets/photo-1535632066927-ab7c9ab60908.jpg" },
-    { id: "wildflower", name: "Кольцо Тринити", detail: "18kt yellow gold · fancy yellow diamond", price: "$12,900", image: "/assets/photo-1605100804763-247f67b3557e.jpg" },
+    { id: "laurence", name: "Кольцо Турмалин", detail: "0,54 карат бриллиантов, 1,29 карат турмалин", price: "679 000 ₸", image: "/assets/catalog/turmaline.png" },
+    { id: "classic-studs", name: "Кольцо Сапфир", detail: "бриллианты 1,71 карат, 0,78 карат сапфир", price: "1 359 000 ₸", image: "/assets/catalog/senssapphire.png" },
+    { id: "wildflower", name: "Изумрудное кольцо", detail: "бриллианты 0,60 карат, изумруд 0,80 карат", price: "789 000 ₸", image: "/assets/catalog/emerald.png" },
 ];

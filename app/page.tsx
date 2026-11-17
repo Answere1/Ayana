@@ -7,16 +7,7 @@ import { AppointmentButton } from "@/components/AppointmentButton";
 import { products } from "@/data/products";
 
 // Demo selection. Replace the fourth entry with a real product when ready.
-const popularProducts = [
-  ...products.slice(0, 3),
-  {
-    id: "celestial",
-    name: "Кольцо Солитер",
-    detail: "18kt white gold · round brilliant diamonds",
-    price: "$4,500",
-    image: "/assets/photo-1617038220319-276d3cfab638.jpg",
-  },
-];
+const popularProducts = products.slice(0, 3);
 
 export default function HomePage() {
   return (
@@ -28,7 +19,7 @@ export default function HomePage() {
         <Image
           alt="A portrait adorned with a brilliant diamond necklace"
           className="hero-image"
-          src="/assets/campaign.png"
+          src="/assets/model1.jpg"
           fill
           sizes="100vw"
           priority
@@ -83,7 +74,9 @@ export default function HomePage() {
 
         <div className="popular-grid">
           {popularProducts.map((product) => (
-            <article className="popular-card" key={product.id}>
+            <article
+              className={`popular-card popular-card--${product.id}`}
+              key={product.id}>
               <a href="#appointment" className="popular-product-link">
                 <div className="popular-image">
                   <Image
@@ -120,14 +113,14 @@ export default function HomePage() {
             В самом сердце Дубая наши мастера дарят каждому изделию свою неповторимую, спокойную жизнь. Создано, чтобы служить вечно.
           </p>
           <a className="light-link" href="#appointment">
-            ИССЛЕДОВАТЬ Мастерскую <Icon name="arrow" />
+            ИССЛЕДОВАТЬ МАСТЕРСКУЮ <Icon name="arrow" />
           </a>
         </div>
         <div className="atelier-image">
           <Image
             alt="Fine gold jewelry crafted with meticulous detail"
             loading="lazy"
-            src="/assets/photo-1611652022419-a9419f74343d.jpg"
+            src="/assets/model2.jpg"
             fill
             sizes="100vw"
           />

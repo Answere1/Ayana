@@ -860,7 +860,7 @@ button {
 
 .popular-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
 }
 
@@ -980,4 +980,13 @@ button {
     .popular-view-all svg {
         transition: none;
     }
+}
+
+
+
+
+.popular-card--laurence .popular-image img {
+  object-fit:cover;
+  box-sizing: border-box;
+  object-position: center 42%;
 }

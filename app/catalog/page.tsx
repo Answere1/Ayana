@@ -12,8 +12,8 @@ import "./module-catalog.css";
 
 const groups = [
   { key: "category", title: "Категория", values: ["Кольца", "Серьги", "Ожерелья", "Браслеты"] },
-  { key: "metal", title: "Металл", values: ["Жёлтое золото", "Белое золото", "Розовое золото", "Платина"] },
-  { key: "stone", title: "Вставка", values: ["Бриллиант", "Сапфир", "Изумруд", "Рубин", "Без камней"] },
+  { key: "metal", title: "Металл", values: ["Желтое золото", "Белое золото", "Розовое золото", "Платина"] },
+  { key: "stone", title: "Вставка", values: ["Бриллиант", "Сапфир", "Изумруд", "Рубин", "Турмалин", "Топаз"] },
 ] as const;
 type FilterKey = (typeof groups)[number]["key"];
 type Filters = Record<FilterKey, string[]>;
