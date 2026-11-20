@@ -27,7 +27,7 @@ export function Header() {
         <header className="site-header">
             <button type="button" className="icon-button menu-trigger" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(!menuOpen)}><Icon name={menuOpen ? "close" : "menu"} /></button>
             <nav className="desktop-nav" aria-label="Main navigation">{navigation.map(link => <a key={link.id} href={link.href}>{link.label.toUpperCase()}</a>)}</nav>
-            <a className="wordmark" href="/" aria-label="AYANA home"><Image src="assets\ayanalogo.png" alt="1" width={100} height={50} style={{
+            <a className="wordmark" href="/" aria-label="AYANA home"><Image src="/assets/ayanalogo.png" alt="ayana" width={100} height={50} style={{
                 width: "180px",
                 height: "auto",
             }}
@@ -45,7 +45,7 @@ export function Header() {
                 <label htmlFor="jewellery-search">Поиск</label>
                 <input id="jewellery-search" type="search" placeholder="Кольца, ожерелья, серьги…" autoComplete="off" value={query} onChange={event => setQuery(event.target.value)} />
                 <div id="search-results" aria-live="polite">{results.length ? results.map(product => <a key={product.id} href="#pieces" onClick={() => setPanel(null)}>{product.name}</a>) : <p>Не найдено</p>}</div>
-            </> : <><p>Ваш список избранное пуст.</p><a className="text-link" href="#pieces" onClick={() => setPanel(null)}><Icon name="arrow" /></a></>}
+            </> : <><p>Ваш список избранного пуст.</p><a className="text-link" href="#pieces" onClick={() => setPanel(null)}><Icon name="arrow" /></a></>}
         </Dialog>
     </>;
 }

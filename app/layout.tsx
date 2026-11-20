@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "AYANA — Exceptional High Jewellery",
-    description: "Discover the AYANA jewellery collection.",
+    title: "AYANA — Ювелирный магазин",
+    description: "Казахстанский бренд арабского производства.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

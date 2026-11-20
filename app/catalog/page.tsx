@@ -109,9 +109,9 @@ export default function CatalogPage() {
           <label className="catalog-search"><span className="catalog-sr-only">Поиск по каталогу</span><input type="search" placeholder="Найти украшение" value={query} onChange={event => setQuery(event.target.value)} /></label>
           {activeCount > 0 && <div className="catalog-active-filters">{groups.flatMap(group => filters[group.key].map(value => <button type="button" key={`${group.key}-${value}`} onClick={() => toggle(group.key, value)} aria-label={`Убрать фильтр ${value}`}>{value} <span aria-hidden="true">×</span></button>))}<button type="button" onClick={reset}>Сбросить всё</button></div>}
           <div className={`catalog-products${view === "list" ? " catalog-products-list" : ""}`}>
-            {results.map(product => <article className={`catalog-card catalog-card--${product.id}`} key={product.id}>
+            {results.map((product, index) => <article className={`catalog-card catalog-card--${product.id}`} key={product.id}>
               <button type="button" className="catalog-product-button" onClick={() => setSelected(product)} aria-label={`Подробнее: ${product.name}`} aria-haspopup="dialog">
-                <div className="catalog-product-image"><Image src={product.image} alt={product.name} width={600} height={480} /></div>
+                <div className="catalog-product-image"><Image src={product.image} alt={product.name} width={600} height={480} loading={index < 4 ? "eager" : "lazy"}/></div>
                 <div className="catalog-product-info"><h2>{product.name}</h2><p className="catalog-product-price">{money(product.price)}</p><p className="catalog-product-detail">{product.metal}, {getStones(product.stone).join(", ").toLocaleLowerCase("ru-RU")}</p></div>
               </button>
             </article>)}

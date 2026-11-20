@@ -3,10 +3,9 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Icon } from "@/components/Icons";
-import { AppointmentButton } from "@/components/AppointmentButton";
 import { products } from "@/data/products";
 
-// Demo selection. Replace the fourth entry with a real product when ready.
+
 const popularProducts = products.slice(0, 3);
 
 export default function HomePage() {
@@ -14,7 +13,6 @@ export default function HomePage() {
     <main id="top">
       <Header />
 
-      {/* Главный экран */}
       <section className="hero" aria-labelledby="hero-title">
         <Image
           alt="A portrait adorned with a brilliant diamond necklace"
@@ -32,7 +30,7 @@ export default function HomePage() {
             <br />
             в каждом <em>аспекте.</em>
           </h1>
-          <a className="light-link" href="#pieces">
+          <a className="light-link" href="/catalog">
             ОТКРЫТЬ КОЛЛЕКЦИЮ <Icon name="arrow" />
           </a>
         </div>
@@ -59,9 +57,8 @@ export default function HomePage() {
         </a>
       </section>
 
-      {/* Популярные украшения: единый блок вместо вступления, коллекции и прежней подборки */}
+
       <section className="popular-products" id="pieces" aria-labelledby="popular-title">
-        {/* Сохраняем переходы из существующей шапки. */}
         <span id="intro" className="popular-anchor" aria-hidden="true" />
         <span id="collections" className="popular-anchor" aria-hidden="true" />
 
@@ -98,7 +95,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ателье */}
       <section className="atelier" id="story">
         <div className="atelier-copy">
           <p className="eyebrow">ТРУД РЕМЕСЛЕННИКОВ</p>
@@ -112,9 +108,7 @@ export default function HomePage() {
           <p>
             В самом сердце Дубая наши мастера дарят каждому изделию свою неповторимую, спокойную жизнь. Создано, чтобы служить вечно.
           </p>
-          <a className="light-link" href="#appointment">
-            ИССЛЕДОВАТЬ МАСТЕРСКУЮ <Icon name="arrow" />
-          </a>
+          <a href="/about" className="light-link">НАША МАСТЕРСКАЯ <Icon name="arrow" /></a>
         </div>
         <div className="atelier-image">
           <Image
@@ -127,7 +121,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Запись на встречу */}
       <section className="appointment" id="appointment">
         <p className="eyebrow">МОМЕНТ ДЛЯ ВАС</p>
         <h2>
@@ -135,9 +128,7 @@ export default function HomePage() {
           <br />
           лучше <em>увидеть</em> лично.
         </h2>
-        <AppointmentButton>
-          ЗАПИСАТЬСЯ НА ВСТРЕЧУ <Icon name="arrow" />
-        </AppointmentButton>
+          <a href="/about" className="text-link appointment-button">КОНТАКТЫ <Icon name="arrow" /></a>
       </section>
 
       <Footer />
