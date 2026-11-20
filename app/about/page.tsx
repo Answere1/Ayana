@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import GoogleMap from "@/components/GoogleMap";
 import "./about-module.css";
 
 export const metadata: Metadata = {
@@ -59,7 +60,7 @@ export default function AboutPage() {
                     <Link className="ayana-about-catalog-link" href="/catalog">Смотреть украшения <span aria-hidden="true">→</span></Link>
                 </div>
                 <div className="ayana-about-photo">
-                    <Image src="/assets/about/ayana-story.png" alt="Золотые серьги и кольцо с бриллиантом рядом с коробкой AYANA на светлом камне. Иллюстрация концепции бренда." width={1584} height={992} sizes="(max-width: 800px) 90vw, 53vw" priority />
+                    <Image src="/assets/about/story.jpg" alt="Золотые серьги и кольцо с бриллиантом рядом с коробкой AYANA на светлом камне. Иллюстрация концепции бренда." width={1584} height={992} priority />
                 </div>
             </section>
 
@@ -67,7 +68,7 @@ export default function AboutPage() {
                 <span id="appointment" className="ayana-about-anchor" aria-hidden="true" />
                 <div className="ayana-about-invitation">
                 <div className="ayana-about-photo1">
-                    <Image src="/assets/about/shop-example.jpg" alt="Золотые серьги и кольцо с бриллиантом рядом с коробкой AYANA на светлом камне. Иллюстрация концепции бренда." width={1584} height={992} sizes="(max-width: 800px) 90vw, 53vw" priority />
+                    <GoogleMap src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1252.4155355009125!2d71.39914783509286!3d51.11157688280229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1795170762515!5m2!1sru!2skz"/>
                 </div>
                 </div>
                 <div className="ayana-about-contact-list">

@@ -673,3 +673,27 @@
     object-fit: contain;
     box-sizing: border-box;
 }
+
+
+.catalog-card--rubin-baguette-ring .catalog-product-image img {
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+
+.catalog-card--topas-heart-ring .catalog-product-image img {
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+
+.catalog-card--puset-studs .catalog-product-image img {
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+
+.catalog-card--love .catalog-product-image img {
+    object-fit: contain;
+    box-sizing: border-box;
+}

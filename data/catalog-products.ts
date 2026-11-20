@@ -11,7 +11,7 @@ export const catalogProducts: CatalogProduct[] = [
     "metal": "Желтое золото",
     "stone": ["Бриллиант"],
     "price": 900000,
-    "image": "/assets/catalog/cuchon.jpg",
+    "image": "/assets/catalog/cuchon1.png",
     "description": "Роскошный 2-каратный бриллиант в огранке солитер 750 проба золота.",
     "rank": 0
   },
@@ -93,17 +93,6 @@ export const catalogProducts: CatalogProduct[] = [
     "rank": 7
   },
   {
-    "id": "sapphire-marquise-ring",
-    "name": "Сапфировое кольцо Маркиз",
-    "category": "Кольца",
-    "metal": "Белое золото",
-    "stone": ["Бриллиант", "Сапфир"],
-    "price": 899000,
-    "image": "/assets/catalog/sapphiremarquise.png",
-    "description": "Кольцо сапфир с огранкой Маркиз. 0.42 карата природных бриллиантов, 1.20 карата природного камня, 750 проба белого золота",
-    "rank": 8
-  },
-  {
     "id": "velicolepie-ring",
     "name": "Кольцо Великолепие",
     "category": "Кольца",
@@ -132,7 +121,7 @@ export const catalogProducts: CatalogProduct[] = [
     "metal": "Белое золото",
     "stone": ["Бриллиант", "Рубин"],
     "price": 1489000,
-    "image": "/assets/catalog/rubinbaguette.png",
+    "image": "/assets/catalog/rubin2.png",
     "description": "Рубиновое кольцо багетной огранки. Природные бриллианты 1.11 карат, Природный рубин 1.32 карата, белое золото 750 пробы.",
     "rank": 11
   },
@@ -142,7 +131,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Кольца",
     "metal": "Белое золото",
     "stone": ["Бриллиант", "Рубин"],
-    "price": 1,
+    "price": 849000,
     "image": "/assets/catalog/rubin.png",
     "description": "Рубиновое кольцо. Природные бриллианты 0.32 карата, Природный рубин 2.38 карат, белое золото 750 пробы.",
     "rank": 12
@@ -168,17 +157,6 @@ export const catalogProducts: CatalogProduct[] = [
     "image": "/assets/catalog/topasheart.png",
     "description": "Кольцо с утонченным Топазом в огранке Сердце. Топаз 2.10 карата, Лабораторные бриллианты, белое золото 750 пробы.",
     "rank": 14
-  },
-  {
-    "id": "halfround-ring",
-    "name": "Кольцо полудорожка",
-    "category": "Кольца",
-    "metal": "Белое золото",
-    "stone": ["Бриллиант"],
-    "price": 750000,
-    "image": "/assets/catalog/halfround.png",
-    "description": "Кольцо полудорожка Round Cut. Природные бриллианты VS-SI, белое золото 750 пробы.",
-    "rank": 15
   },
   {
     "id": "eternity-ring",
@@ -214,17 +192,6 @@ export const catalogProducts: CatalogProduct[] = [
     "rank": 18
   },
   {
-    "id": "puset-square-studs",
-    "name": "Серьги пусеты Квадрат",
-    "category": "Серьги",
-    "metal": "Белое золото",
-    "stone": ["Бриллиант"],
-    "price": 950000,
-    "image": "/assets/catalog/pusetsquare.png",
-    "description": "Пусеты Квадратной огранки. Природные бриллианты 0.9 карат, белое золото 750 пробы.",
-    "rank": 19
-  },
-  {
     "id": "puset-aquamarine-studs",
     "name": "Серьги пусеты Аквамариновые Сердца",
     "category": "Серьги",
@@ -236,6 +203,34 @@ export const catalogProducts: CatalogProduct[] = [
     "rank": 20
   },
   {
+    "id": "aquamarinedef",
+    "name": "Кольцо с аквамаринами",
+    "category": "Браслеты",
+    "metal": "Белое золото",
+    "stone": ["Бриллиант"],
+    "price": 450000,
+    "image": "/assets/catalog/aquamarinedef.png",
+    "description": "Кольцо с аквамаринами. 2 Аквамарина, белое золото 750 пробы.",
+    "rank": 22
+  },
+  {
+    "id": "love",
+    "name": "Кольцо Love",
+    "category": "Кольца",
+    "metal": "Белое золото",
+    "stone": ["Бриллиант"],
+    "price": 919000,
+    "image": "/assets/catalog/love.png",
+    "description": "Кольцо Love. 0,56 карат бриллиантов, белое золото 750 пробы.",
+    "rank": 23
+  }
+];
+
+
+
+/* На разработке
+
+  {
     "id": "tennis-bracelet",
     "name": "Теннисный браслет",
     "category": "Браслеты",
@@ -245,5 +240,73 @@ export const catalogProducts: CatalogProduct[] = [
     "image": "/assets/catalog/tennisbracelet.png",
     "description": "Теннисный браслет. Природные бриллианты 3 карата, белое золото 750 пробы.",
     "rank": 21
-  }
-];
+  },
+
+  {
+    "id": "puset-square-studs",
+    "name": "Серьги пусеты Квадрат",
+    "category": "Серьги",
+    "metal": "Белое золото",
+    "stone": ["Бриллиант"],
+    "price": 950000,
+    "image": "/assets/catalog/pusetsquare.png",
+    "description": "Пусеты Квадратной огранки. Природные бриллианты 0.9 карат, белое золото 750 пробы.",
+    "rank": 19
+  },
+
+
+  {
+    "id": "halfround-ring",
+    "name": "Кольцо полудорожка",
+    "category": "Кольца",
+    "metal": "Белое золото",
+    "stone": ["Бриллиант"],
+    "price": 750000,
+    "image": "/assets/catalog/halfround.png",
+    "description": "Кольцо полудорожка Round Cut. Природные бриллианты VS-SI, белое золото 750 пробы.",
+    "rank": 15
+  },
+
+
+  {
+    "id": "sapphire-marquise-ring",
+    "name": "Сапфировое кольцо Маркиз",
+    "category": "Кольца",
+    "metal": "Белое золото",
+    "stone": ["Бриллиант", "Сапфир"],
+    "price": 899000,
+    "image": "/assets/catalog/sapphiremarquise.png",
+    "description": "Кольцо сапфир с огранкой Маркиз. 0.42 карата природных бриллиантов, 1.20 карата природного камня, 750 проба белого золота",
+    "rank": 8
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
