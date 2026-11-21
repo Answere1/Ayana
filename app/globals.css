@@ -557,7 +557,8 @@ button {
 
     .wordmark {
         letter-spacing: .12em;
-        font-size: 17px
+        font-size: 17px;
+        width: 130px;
     }
 
     .wordmark span {
@@ -580,7 +581,6 @@ button {
         padding: 12px 6% 25px;
         display: flex;
         position: absolute;
-        top: 102px;
         left: 0;
         right: 0
     }
@@ -704,7 +704,8 @@ button {
 
     .footer-mark,
     .footer-mark span {
-        text-align: center
+        text-align: center;
+        width: auto;
     }
 
     .footer-links {
