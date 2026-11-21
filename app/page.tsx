@@ -74,7 +74,7 @@ export default function HomePage() {
             <article
               className={`popular-card popular-card--${product.id}`}
               key={product.id}>
-              <a href="#appointment" className="popular-product-link">
+              <a href="/catalog" className="popular-product-link">
                 <div className="popular-image">
                   <Image
                     src={product.image}

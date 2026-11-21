@@ -1,4 +1,4 @@
-/* ========== КАТАЛОГ /catalog ========== */
+
 .catalog-page {
     background: #fff;
     color: #111;
@@ -594,7 +594,7 @@
     }
 }
 
-/* Изменить фотографию только этого украшения */
+
 .catalog-card--cuchon-ring .catalog-product-image img {
     object-fit: contain;
 
@@ -605,7 +605,7 @@
 .catalog-card--cuchon-ring .catalog-product-info h2 {
 }
 
-/* Изменить цвет цены */
+
 .catalog-card--cuchon-ring .catalog-product-price {
     color: #000000;
 }

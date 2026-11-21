@@ -1,4 +1,4 @@
-/* ========== AYANA: О НАС И КОНТАКТЫ /about ========== */
+
 .ayana-about-page {
     color: #111;
     background: #fff;
@@ -82,7 +82,7 @@
     overflow: hidden;
     background: #eee8df
 }
-
+    
 .ayana-about-photo img {
     display: block;
     width: 100%;

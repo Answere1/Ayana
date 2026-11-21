@@ -456,7 +456,7 @@ button {
 
 .atelier {
     color: #f7f5f1;
-    background: #2b2622;
+    background: #555454;
     grid-template-columns: 1fr 1fr;
     display: grid
 }

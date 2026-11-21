@@ -60,7 +60,7 @@ export default function AboutPage() {
                     <Link className="ayana-about-catalog-link" href="/catalog">Смотреть украшения <span aria-hidden="true">→</span></Link>
                 </div>
                 <div className="ayana-about-photo">
-                    <Image src="/assets/about/story.jpg" alt="Золотые серьги и кольцо с бриллиантом рядом с коробкой AYANA на светлом камне. Иллюстрация концепции бренда." width={1584} height={992} priority />
+                    <Image src="/assets/about/story2.jpg" alt="Золотые серьги и кольцо с бриллиантом рядом с коробкой AYANA на светлом камне. Иллюстрация концепции бренда." width={1584} height={992} priority />
                 </div>
             </section>
 

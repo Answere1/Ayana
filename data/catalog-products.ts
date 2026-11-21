@@ -2,7 +2,7 @@ export interface CatalogProduct {
  id: string; name: string; category: string; metal: string; stone: string | string[]; price: number; image: string; description: string; rank: number;
 }
 
-// Демонстрационные данные и иллюстрации. Замените реальным ассортиментом.
+
 export const catalogProducts: CatalogProduct[] = [
   {
     "id": "cuchon-ring",
@@ -205,7 +205,7 @@ export const catalogProducts: CatalogProduct[] = [
   {
     "id": "aquamarinedef",
     "name": "Кольцо с аквамаринами",
-    "category": "Браслеты",
+    "category": "Кольца",
     "metal": "Белое золото",
     "stone": ["Бриллиант"],
     "price": 450000,

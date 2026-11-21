@@ -5,6 +5,7 @@ import { products } from "@/data/products";
 import { Dialog } from "./Dialog";
 import { Icon } from "./Icons";
 import Image from "next/image";
+import Link from "next/link"
 
 const navigation = [
     { id: "collections", href: "/", label: "Главная" },
@@ -27,11 +28,11 @@ export function Header() {
         <header className="site-header">
             <button type="button" className="icon-button menu-trigger" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation" onClick={() => setMenuOpen(!menuOpen)}><Icon name={menuOpen ? "close" : "menu"} /></button>
             <nav className="desktop-nav" aria-label="Main navigation">{navigation.map(link => <a key={link.id} href={link.href}>{link.label.toUpperCase()}</a>)}</nav>
-            <a className="wordmark" href="/" aria-label="AYANA home"><Image src="/assets/ayanalogo.png" alt="ayana" width={100} height={50} style={{
+            <Link className="wordmark" href="/" aria-label="AYANA home"><Image src="/assets/ayanalogo.png" alt="ayana" width={100} height={50} style={{
                 width: "180px",
                 height: "auto",
             }}
-                 /></a>
+                 /></Link>
             <div className="header-actions">
                 <button type="button" className="icon-button search-button" aria-label="Search" onClick={() => setPanel("search")}><Icon name="search" /></button>
                 <button type="button" className="icon-button bag-button" aria-label="Shopping bag, 0 items" onClick={() => setPanel("bag")}><Icon name="bag" /><span>(0)</span></button>
