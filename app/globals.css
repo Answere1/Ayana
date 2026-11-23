@@ -159,14 +159,14 @@ button {
     color: #fff;
     background: #362329;
     height: min(690px, 72vw);
-    min-height: 510px;
+    min-height: 1010px;
     position: relative;
     overflow: hidden
 }
 
 .hero-image {
     object-fit: cover;
-    object-position: center 42%
+    object-position: center 42%;
 }
 
 .hero-shade {
@@ -810,7 +810,7 @@ button {
 
 .popular-products {
     position: relative;
-    padding: 76px 130px 110px;
+    padding: 50px 130px 110px;
     background: #fff;
     color: #171717;
     scroll-margin-top: 24px;

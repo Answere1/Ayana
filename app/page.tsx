@@ -17,10 +17,10 @@ export default function HomePage() {
         <Image
           alt="A portrait adorned with a brilliant diamond necklace"
           className="hero-image"
-          src="/assets/model1.jpg"
+          src="/assets/model1.jpg"  
           fill
-          sizes="100vw"
           priority
+          sizes="80vw"
         />
         <div className="hero-shade"></div>
         <div className="hero-copy">

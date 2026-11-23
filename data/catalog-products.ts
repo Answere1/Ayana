@@ -1,5 +1,5 @@
 export interface CatalogProduct {
- id: string; name: string; category: string; metal: string; stone: string | string[]; price: number; image: string; description: string; rank: number;
+ id: string; name: string; category: string; metal: string; stone: string | string[]; price: number; image: string; description: string; rank: number; 
 }
 
 
@@ -143,7 +143,7 @@ export const catalogProducts: CatalogProduct[] = [
     "metal": "Белое золото",
     "stone": ["Бриллиант", "Рубин"],
     "price": 600000,
-    "image": "/assets/catalog/rubinlab.png",
+    "image": "/assets/catalog/rubinlabw.png",
     "description": "Рубиновое кольцо LabGrown. LabGrown бриллианты 2.13 карата, Природный рубин ? карат, белое золото 750 пробы.",
     "rank": 13
   },
@@ -175,7 +175,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Кольца",
     "metal": "Белое золото",
     "stone": ["Бриллиант", "Сапфир"],
-    "price": 550000,
+    "price": 0,
     "image": "/assets/catalog/sapphiregreen.png",
     "description": "Кольцо зеленый Сапфир. Зеленый сапфир 1.5 карата, 2 бриллианта Маркиз 0.27 карат, белое золото 750 пробы.",
     "rank": 17
@@ -186,7 +186,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Серьги",
     "metal": "Белое золото",
     "stone": ["Бриллиант"],
-    "price": 450000,
+    "price": 519000,
     "image": "/assets/catalog/puset.png",
     "description": "Серьги пусеты. белое золото 750 пробы.",
     "rank": 18
@@ -208,7 +208,7 @@ export const catalogProducts: CatalogProduct[] = [
     "category": "Кольца",
     "metal": "Белое золото",
     "stone": ["Бриллиант"],
-    "price": 450000,
+    "price": 0,
     "image": "/assets/catalog/aquamarinedef.png",
     "description": "Кольцо с аквамаринами. 2 Аквамарина, белое золото 750 пробы.",
     "rank": 22
